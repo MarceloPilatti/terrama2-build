@@ -1,0 +1,27 @@
+{
+  "basePath": "%%TERRAMA2_BASE_PATH%%adm/",
+  "geoserverHost": "%%TERRAMA2_DNS%%",
+  "geoserverBasePath": "%%TERRAMA2_BASE_PATH%%geoserver",
+  "geoserverPort": %%NGINX_PORT%%,
+  "port": 36000,
+  "defaultFilePathList": [
+    "/data",
+    "/shared-data"
+  ],
+  "defaultExecutablePath": "/opt/terrama2/%%TERRAMA2_TAG%%/bin",
+  "defaultExecutableName": "terrama2_service",
+  "disablePDF": true,
+  "debug": true,
+  "OGR2OGR": "ogr2ogr",
+  "SHP2PGSQL": "shp2pgsql",
+  "toolsMenu": [
+    {
+      "textEn": "Example",
+      "textEs": "Ejemplo",
+      "textFr": "Exemple",
+      "textPt": "Exemplo",
+      "url": "http://example.com/",
+      "openInNewTab": true
+    }
+  ]
+}

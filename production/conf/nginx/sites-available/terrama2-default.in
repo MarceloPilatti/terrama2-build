@@ -1,0 +1,6 @@
+server {
+  server_name %%TERRAMA2_DNS%%;
+  listen %%NGINX_PORT%%;
+
+  include /etc/nginx/terrama2/terrama2.conf;
+}
