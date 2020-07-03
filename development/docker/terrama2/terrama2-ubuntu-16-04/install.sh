@@ -4,8 +4,8 @@ cd /
 
 apt-get update
 
-apt-get install -y qtcreator curl unzip locales supervisor wget libcurl3-dev libpython2.7-dev libproj-dev libgeos++-dev libssl-dev \
-libxerces-c-dev screen doxygen graphviz gnutls-bin gsasl libgsasl7 libghc-gsasl-dev libgnutls-dev zlib1g-dev python-psycopg2 \
+apt-get install -y qtcreator curl unzip zip locales supervisor wget libcurl3-dev libpython2.7-dev libproj-dev libgeos++-dev libssl-dev \
+libxerces-c-dev screen gdal-bin doxygen graphviz gnutls-bin gsasl libgsasl7 libghc-gsasl-dev libgnutls-dev zlib1g-dev python-psycopg2 \
 debhelper devscripts git build-essential ssh openssh-server libpq-dev sudo qt5-default nano apt-transport-https ca-certificates
 
 TERRAMA2_USER=terrama2

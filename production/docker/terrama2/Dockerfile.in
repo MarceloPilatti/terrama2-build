@@ -19,6 +19,7 @@ RUN apt-get update && \
     apt-get install -y curl \
                        libquazip-dev \
                        unzip \
+                       zip \
                        sudo \
                        nano \
                        screen \
@@ -26,6 +27,7 @@ RUN apt-get update && \
                        openssh-server \
                        apt-transport-https \
                        ca-certificates \
+                       gdal-bin \
                        # VMime Dependencies
                        doxygen \
                        # Process Control

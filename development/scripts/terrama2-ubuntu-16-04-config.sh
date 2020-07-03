@@ -84,7 +84,7 @@ fi
 
 sudo apt-get update
 
-sudo apt-get install -y qtcreator curl unzip locales supervisor libcurl3-dev libpython2.7-dev libproj-dev libgeos++-dev \
+sudo apt-get install -y qtcreator curl zip unzip gdal-bin locales supervisor libcurl3-dev libpython2.7-dev libproj-dev libgeos++-dev \
 libssl-dev libxerces-c-dev screen doxygen graphviz gnutls-bin gsasl libgsasl7 libghc-gsasl-dev libgnutls-dev zlib1g-dev \
 debhelper devscripts git ssh openssh-server libpq-dev openjdk-8-jdk build-essential python-psycopg2
 
