@@ -47,7 +47,7 @@ UPDATE terrama2.data_providers set uri='postgis://postgres:postgres@localhost:54
 ```
 UPDATE terrama2.service_instances set host='',"pathToBinary"='/home/<USER>/mydevel/terrama2/build/bin/terrama2_service',"sshUser"='';
 
-UPDATE terrama2.registered_views set uri = 'http://localhost/geoserver/';
+UPDATE terrama2.registered_views set uri = 'http://localhost:8080/geoserver/';
 
 UPDATE terrama2.service_metadata set value = 'http://localhost:8080/geoserver/' where key = 'maps_server';
 ```
