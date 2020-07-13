@@ -2,7 +2,9 @@ FROM node:12
 
 WORKDIR /app
 
-RUN git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report-server.git . && \
+RUN apt-get update && \
+    apt-get install gdal-bin && \
+    git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report-server.git . && \
     npm install --production
 
 ENV NODE_ENV=production
