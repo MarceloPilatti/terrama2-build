@@ -29,7 +29,7 @@ BEGIN
     tablenames := string_agg('"' || tablename || '"', ', ') 
         FROM pg_tables WHERE schemaname = 'public' AND tablename LIKE 'a_%';
     EXECUTE 'DROP TABLE ' || tablenames;
-END; $$
+END; $$;
 ```
 
 ## Update some column values
@@ -39,7 +39,7 @@ psql -U postgres -h localhost -d terrama2
 
 UPDATE terrama2.logs set host='localhost';
 
-UPDATE terrama2.data_providers set uri='postgis://postgres:postgres@localhost:5432/terrama2';
+UPDATE terrama2.data_providers set uri='postgis://postgres:postgres@localhost:5432/terrama2' WHERE data_provider_type_id = 4;
 ```
 
 ### On the next update, substitute `<USER>` for your system user name

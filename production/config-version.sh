@@ -42,5 +42,6 @@ for image in conf/terrama2/terrama2_webapp_settings.json.in \
         -e 's!%%PG_DATABASE%%!'"${PG_DATABASE}"'!g' \
         -e 's!%%NGINX_USER%%!'"${NGINX_USER}"'!g' \
         -e 's!%%NGINX_PORT%%!'"${NGINX_PORT}"'!g' \
+        -e 's!%%TERRAMA2_SSL%%!'"${TERRAMA2_SSL}"'!g' \
       "${image}" > "${image::-3}"
 done
