@@ -37,7 +37,7 @@ sudo usermod -aG docker $USER
 if type -P docker-compose >/dev/null; then
    echo "Docker compose already installed"
 else
-   sudo wget -qO /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)"
+   sudo wget -qO /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)"
    sudo chmod +x /usr/local/bin/docker-compose
    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 fi
@@ -49,7 +49,7 @@ echo "* Cloning projects *"
 echo "********************"
 echo ""
 
-git clone -b b4.1.0 -o upstream https://github.com/TerraMA2/terrama2.git ~/mydevel/terrama2/codebase
+git clone -b b4.1.1 -o upstream https://github.com/TerraMA2/terrama2.git ~/mydevel/terrama2/codebase
 GIT_SSL_NO_VERIFY=false git clone -o upstream -b 5.4.5 https://gitlab.dpi.inpe.br/terralib/terralib.git ~/mydevel/terrama2/terralib/codebase
 
 git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report.git ~/mydevel/terrama2-report
