@@ -2,6 +2,8 @@
 
 CURRENT_DIR=$(pwd)
 
+eval $(egrep -v '^#' .env | xargs)
+
 cd /home/$USER
 
 echo "************************"
@@ -107,7 +109,7 @@ echo "* Cloning projects *"
 echo "********************"
 echo ""
 
-git clone -b b4.1.1 -o upstream https://github.com/TerraMA2/terrama2.git $TERRAMA_CODEBASE_PATH
+git clone -b b${TERRAMA2_VERSION} -o upstream https://github.com/TerraMA2/terrama2.git $TERRAMA_CODEBASE_PATH
 GIT_SSL_NO_VERIFY=false git clone -o upstream -b 5.4.5 https://gitlab.dpi.inpe.br/terralib/terralib.git $TERRALIB_CODEBASE_PATH
 
 echo "************"
@@ -211,13 +213,13 @@ cd /home/${USER}
 if test -d "geoserver-2.12.5"; then
     echo "Geoserver already installed"
 else 
-    wget -O geoserver-2.12.5-bin.zip -L https://ufpr.dl.sourceforge.net/project/geoserver/GeoServer/2.12.5/geoserver-2.12.5-bin.zip
-    unzip geoserver-2.12.5-bin.zip
-    rm -f geoserver-2.12.5-bin.zip
+    wget -O geoserver-${GEOSERVER_VERSION}-bin.zip -L https://ufpr.dl.sourceforge.net/project/geoserver/GeoServer/${GEOSERVER_VERSION}/geoserver-${GEOSERVER_VERSION}-bin.zip
+    unzip geoserver-${GEOSERVER_VERSION}-bin.zip
+    rm -f geoserver-${GEOSERVER_VERSION}-bin.zip
 fi
 
 echo -e "
-alias gs-start=\"cd ~/geoserver-2.12.5/bin;./startup.sh\"
+alias gs-start=\"cd ~/geoserver-${GEOSERVER_VERSION}/bin;./startup.sh\"
 alias adm-start=\"cd ~/mydevel/terrama2/codebase/webapp;npm start\"
 alias monitor-start=\"cd ~/mydevel/terrama2/codebase/webmonitor;npm start\"" >> ~/.bashrc
 
