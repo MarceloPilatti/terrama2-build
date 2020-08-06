@@ -5,6 +5,8 @@ echo "* Installing packages *"
 echo "***********************"
 echo ""
 
+eval $(egrep -v '^#' .env | xargs)
+
 sudo apt-get update
 sudo apt-get -y install apt-transport-https software-properties-common ca-certificates gnupg-agent git
 
@@ -49,11 +51,11 @@ echo "* Cloning projects *"
 echo "********************"
 echo ""
 
-git clone -b b4.1.1 -o upstream https://github.com/TerraMA2/terrama2.git ~/mydevel/terrama2/codebase
-GIT_SSL_NO_VERIFY=false git clone -o upstream -b 5.4.5 https://gitlab.dpi.inpe.br/terralib/terralib.git ~/mydevel/terrama2/terralib/codebase
+git clone -b ${TERRAMA2_VERSION} -o upstream https://github.com/TerraMA2/terrama2.git ~/mydevel/terrama2/codebase
+GIT_SSL_NO_VERIFY=false git clone -o upstream -b ${TERRALIB_VERSION} https://gitlab.dpi.inpe.br/terralib/terralib.git ~/mydevel/terrama2/terralib/codebase
 
-git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report.git ~/mydevel/terrama2-report
-git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report-server.git ~/mydevel/terrama2-report-server
+git clone -b ${SATALERTAS_VERSION} -o upstream https://github.com/TerraMA2/terrama2-report.git ~/mydevel/terrama2-report
+git clone -b ${SATALERTAS_VERSION} -o upstream https://github.com/TerraMA2/terrama2-report-server.git ~/mydevel/terrama2-report-server
 
 cp -a report/report_client/environment.ts ~/mydevel/terrama2-report/src/environments/environment.ts
 cp -a report/report_client/environment.prod.ts ~/mydevel/terrama2-report/src/environments/environment.prod.ts
