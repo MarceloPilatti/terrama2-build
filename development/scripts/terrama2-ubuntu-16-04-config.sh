@@ -109,8 +109,8 @@ echo "* Cloning projects *"
 echo "********************"
 echo ""
 
-git clone -b b${TERRAMA2_VERSION} -o upstream https://github.com/TerraMA2/terrama2.git $TERRAMA_CODEBASE_PATH
-GIT_SSL_NO_VERIFY=false git clone -o upstream -b 5.4.5 https://gitlab.dpi.inpe.br/terralib/terralib.git $TERRALIB_CODEBASE_PATH
+git clone -b ${TERRAMA2_VERSION} -o upstream https://github.com/TerraMA2/terrama2.git $TERRAMA_CODEBASE_PATH
+GIT_SSL_NO_VERIFY=false git clone -o upstream -b ${TERRALIB_VERSION} https://gitlab.dpi.inpe.br/terralib/terralib.git $TERRALIB_CODEBASE_PATH
 
 echo "************"
 echo "* TerraLib *"

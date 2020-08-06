@@ -1,5 +1,7 @@
 #!/bin/bash
 
+eval $(egrep -v '^#' .env | xargs)
+
 cd /home/$USER
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
@@ -18,8 +20,8 @@ sudo chown -R 1000:1000 /home/$(id -un 1000)/.npm
 
 sudo npm install -g @angular/cli@8.3.20
 
-git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report.git /home/$USER/mydevel/terrama2-report
-git clone -b b1.0.0 -o upstream https://github.com/TerraMA2/terrama2-report-server.git /home/$USER/mydevel/terrama2-report-server
+git clone -b ${SATALERTAS_VERSION} -o upstream https://github.com/TerraMA2/terrama2-report.git /home/$USER/mydevel/terrama2-report
+git clone -b ${SATALERTAS_VERSION} -o upstream https://github.com/TerraMA2/terrama2-report-server.git /home/$USER/mydevel/terrama2-report-server
 
 cd /home/$USER/mydevel/terrama2-report
 npm install
