@@ -210,7 +210,7 @@ echo "### Installing Geoserver... ###"
 
 cd /home/${USER}
 
-if test -d "geoserver-2.12.5"; then
+if test -d "geoserver-${GEOSERVER_VERSION}"; then
     echo "Geoserver already installed"
 else 
     wget -O geoserver-${GEOSERVER_VERSION}-bin.zip -L https://ufpr.dl.sourceforge.net/project/geoserver/GeoServer/${GEOSERVER_VERSION}/geoserver-${GEOSERVER_VERSION}-bin.zip

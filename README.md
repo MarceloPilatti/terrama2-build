@@ -1,9 +1,8 @@
-# TerraMA² build
+# TerraMA² development environment configuration
 
-Scripts for automating the configuration of the **development** and **production** environment of the [TerraMA² platform](https://github.com/TerraMA2/terrama2).
+This automatically configures TerraMA² **development** environment on ubuntu 16.04 and with [Docker](https://docs.docker.com/get-docker/).
 
-There are 2 folders on the root of this repository: production and development. A readme file with the instructions of use of each one can be found on the following links.
+## Folder structure
 
-- [Production](production/README.md)
-
-- [Development](development/README.md)
+- `docker` - Configuration with docker [Docker README.md](docker/README.md);
+- `scripts` - Configuration with scripts for **ubuntu 16.04** (without Docker) [Scripts README.md](scripts/README.md).

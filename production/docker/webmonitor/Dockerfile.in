@@ -1,7 +1,0 @@
-FROM %%TERRAMA2_DOCKER_REGISTRY%%/terrama2:%%TERRAMA2_TAG%%
-
-EXPOSE 36001
-
-COPY docker-entrypoint.sh /
-
-ENTRYPOINT /docker-entrypoint.sh
